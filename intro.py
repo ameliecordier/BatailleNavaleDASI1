@@ -32,9 +32,19 @@ def afficher_ocean(ocean):
     pprint(ocean)
 
 
+
 h, l = saisir_params_ocean()
 o = construire_ocean(h, l)
 afficher_ocean(o)
+
+
+class Test_mesTests(unittest.TestCase):
+
+    def test_stupide(self):
+        self.assertEqual(1+1, 2)
+
+
+unittest.main()
 
      
 
