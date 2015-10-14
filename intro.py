@@ -25,6 +25,10 @@ def construire_ocean(hauteur_ocean, largeur_ocean):
         for case in range(largeur_ocean):
             ligne.append('O')
         ocean.append(ligne)
+
+    print("len(ocean) :" + str(len(ocean)))
+    print("len(ocean[0]) :" + str(len(ocean[0])))
+
     return ocean
 
 
@@ -40,8 +44,11 @@ afficher_ocean(o)
 
 class Test_mesTests(unittest.TestCase):
 
-    def test_stupide(self):
-        self.assertEqual(1+1, 2)
+    def test_ocean(self):
+        ocean_test = construire_ocean(3,4)
+        
+        self.assertEqual(len(ocean_test), 3)
+        self.assertEqual(len(ocean_test[0]),4)
 
 
 unittest.main()
