@@ -1,57 +1,43 @@
 from pprint import pprint
-import unittest
 
-def start_up(self):
-    print("Bonjour et bienvenue dans ce jeu de bataille navale merveilleux !")
-    print("Voulez-vous jouer avec moi ?")
-    jouer = input("Répondez O pour oui, N pour non... ")
+class Fonctions :
+    def start_up(self):
+        print("Bonjour et bienvenue dans ce jeu de bataille navale merveilleux !")
+        print("Voulez-vous jouer avec moi ?")
+        jouer = input("Répondez O pour oui, N pour non... ")
 
-    if jouer =="O":
-        print("Yeahhh !")
-    else:
-        print("Ohhh nonnnnn")
+        if jouer =="O":
+            print("Yeahhh !")
+        else:
+            print("Ohhh nonnnnn")
 
-def saisir_params_ocean():
-    print("Notre plus grand océan est de taille 10 * 10")
-    print("Indiquer la taille de l'océan :")
-    largeur = int(input("Quelle est la largeur de l'océan : "))
-    hauteur = int(input("Quelle est la hauteur de l'océan : "))
-    return hauteur, largeur
+    def saisir_params_ocean():
+        print("Notre plus grand océan est de taille 10 * 10")
+        print("Indiquer la taille de l'océan :")
+        largeur = int(input("Quelle est la largeur de l'océan : "))
+        hauteur = int(input("Quelle est la hauteur de l'océan : "))
+        return hauteur, largeur
 
-def construire_ocean(hauteur_ocean, largeur_ocean):
-    ocean = []
-    for liste in range(hauteur_ocean):
-        ligne = []
-        for case in range(largeur_ocean):
-            ligne.append('O')
-        ocean.append(ligne)
+    def construire_ocean(hauteur_ocean, largeur_ocean):
+        ocean = []
+        for liste in range(hauteur_ocean):
+            ligne = []
+            for case in range(largeur_ocean):
+                ligne.append('O')
+            ocean.append(ligne)
 
-    print("len(ocean) :" + str(len(ocean)))
-    print("len(ocean[0]) :" + str(len(ocean[0])))
+        print("len(ocean) :" + str(len(ocean)))
+        print("len(ocean[0]) :" + str(len(ocean[0])))
 
-    return ocean
-
-
-def afficher_ocean(ocean):
-    pprint(ocean)
+        return ocean
 
 
-
-h, l = saisir_params_ocean()
-o = construire_ocean(h, l)
-afficher_ocean(o)
+    def afficher_ocean(ocean):
+        pprint(ocean)
 
 
-class Test_mesTests(unittest.TestCase):
-
-    def test_ocean(self):
-        ocean_test = construire_ocean(3,4)
-        
-        self.assertEqual(len(ocean_test), 3)
-        self.assertEqual(len(ocean_test[0]),4)
 
 
-unittest.main()
 
      
 
