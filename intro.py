@@ -15,6 +15,7 @@ class Fonctions :
             b = True
         else:
             print("Ohhh nonnnnn")
+
             b = False
 
         return b
