@@ -1,16 +1,19 @@
 from pprint import pprint
 
 class Fonctions :
-    def start_up(self):
+    def start_up():
         print("Bonjour et bienvenue dans ce jeu de bataille navale merveilleux !")
         print("Voulez-vous jouer avec moi ?")
         jouer = input("Répondez O pour oui, N pour non... ")
 
-        if jouer =="O":
+        if jouer =="O" or jouer =="o":
             print("Yeahhh !")
+            b = True
         else:
             print("Ohhh nonnnnn")
+            b = False
 
+        return b
     def saisir_params_ocean():
         print("Notre plus grand océan est de taille 10 * 10")
         print("Indiquer la taille de l'océan :")
