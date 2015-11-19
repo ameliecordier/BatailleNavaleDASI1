@@ -11,5 +11,24 @@ class Bateau:
         self.type = type
         self.taille = types_bateau[type]
 	self.is_placed = False
+	self.position = {}
+	self.etat = True
 
-
+    def set_position(self, x, y, orient):
+    '''
+    blabla
+    '''
+        
+        position = {{x,y,e}} 
+        if orient == 'haut':
+            
+        elif orient == 'bas':
+            
+        elif orient == 'gauche':
+                
+        else:
+        self.is_placed = True
+        
+        
+        
+    
