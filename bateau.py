@@ -6,10 +6,9 @@ types_bateau = {
     'torpilleur': 2
 }
 
+
 class Bateau:
     def __init__(self, type):
         self.type = type
         self.taille = types_bateau[type]
-	self.is_placed = False
-
-
+        self.is_placed = False
