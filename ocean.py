@@ -1,6 +1,7 @@
 __author__ = 'phylante'
 from pprint import pprint
 
+
 class Ocean:
     def __init__(self, hauteur=0, largeur=0):
         self.ocean = self.construire_ocean(hauteur,
@@ -17,7 +18,7 @@ class Ocean:
         :return: la case pos de la ligne passée
         """
         return self.ocean[pos]
-        
+
     def largeur(self):
         if len(self.ocean) > 0:
             return len(self.ocean[0])
@@ -38,4 +39,3 @@ class Ocean:
     def afficher_ocean(self):
         for x in range(len(self.ocean)):
             print(" ".join(self.ocean[x]))
-
