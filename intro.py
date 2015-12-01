@@ -49,7 +49,7 @@ class Fonctions :
                            #Bateau b = Bateau.__init__(untype)#
                            #liste_bateaux.add(b)#
                            #i = i+1#
-                 ok = True
+                 #ok = True
     
             else :
                 ok = False
