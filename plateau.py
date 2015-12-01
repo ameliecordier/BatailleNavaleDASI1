@@ -3,10 +3,10 @@ from ocean import Ocean
 
 class Joueur:
     
-    def __init__(self, tailleoceanx, tailleoceany):
+    def __init__(self, tailleoceanx, tailleoceany, flotte):
         
         ocean1 = Ocean(tailleoceanx,tailleoceany)
-        flotte1 # = Fonctions.creeFlotte()
+        flotte1 = flotte
         
     def jouer(self, position, adversaire):
         
