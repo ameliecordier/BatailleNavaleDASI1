@@ -17,6 +17,10 @@ class Ocean:
         :return: la case pos de la ligne passée
         """
         return self.ocean[pos]
+        
+    def largeur(self):
+        if len(self.ocean) > 0:
+            return len(self.ocean[0])
 
     @staticmethod
     def saisir_params_ocean():
