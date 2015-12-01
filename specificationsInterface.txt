@@ -1,0 +1,56 @@
+Spécifications de l'interface de jeu vues par le client :
+
+
+1. Bonjour et bienvenue... voulez-vous jouer (o/n) :
+	o : le jeu démarre
+	n : on quitte
+	autre chose : on repose la question 
+	
+2. Si le jeu démarre, lire la suite
+
+3. Quelle taille d'océan voulez-vous ? 
+	(doit permettre de rentrer des valeurs x/y entières, de taille <26)
+	boucle tant que les valeurs saisies sont non valides. 
+	
+3. Quel set de bateaux voulez-vous ? 
+	Permet de choisir le nombre de bateau de chaque type avec lequel on va jouer
+	boucle tant que le set n'est pas valide
+	possibilité de choisir un set par défaut (5 bateaux, un de chaque type)
+	c'est pas moi c'est wikipedia :
+			
+	*** set par défaut **
+    1 porte-avions (5 cases)
+    1 croiseur (4 cases)
+    1 contre-torpilleurs (3 cases)
+    1 sous-marin (3 cases)
+    1 torpilleur (2 cases)
+	******
+	
+4. Joueur 1, virez le joueur 2 et placez vos bateaux. 
+	Affichage d'un océan vide avec les colonnes numérotées de a à n et les lignes de 1 à X
+	
+	Présente un par un chacun des bateaux du set et demande une coordonnée (lettre, chiffre) et une direction (haut, bas, gauche, droite)
+	Vérifie que les coordonnées sont valides (i.e. le bateau peut être mis intégralement sur l'océan et n'est pas sur un autre bateau. 
+		* Si oui : affichage du bateau sur l'océan et demande à l'utilisateur de valider la position (si valide, passage à 5, sinon, demande de nouvelles coordonnées)
+		* Si non : demande un nouveau jeu de coordonnées
+
+5. Bravo, vous avez placé tous vos bateaux. 
+	Nettoyage de l'écan
+	Appel du joueur 2 
+	(refaire tout 4, mais pour le joueur 2). 
+	
+6. Attention, la partie commence. 
+	
+	Affichage de l'océan "vu par" le joueur 1.
+	Joueur 1, entrez les coordonnées d'un tir.
+	Affichage de touché / coulé
+	Affichage de l'océan "vu par" le joueur 2.
+	Joueur 2, entrez les coordonnées d'un tir.
+	
+	Et on boucle là dessus tant que tous les bateaux d'un joueur ne sont pas coulés
+	
+7. A partir du début de la partie (6), un menu "joueur" doit être accessible au joueur en cours de jeu. Les options :
+	* Voir l'état de mes bateaux
+	* Voir l'état de destruction des bateaux ennemis
+	
+

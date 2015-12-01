@@ -9,6 +9,7 @@ types_bateau = {
     'torpilleur': 2
 }
 
+
 class Bateau:
     def __init__(self, type):
         self.type = type
@@ -40,7 +41,3 @@ class Bateau:
             self.is_placed = True
         else:
             print("Erreur de coordonées!")
-        
-        
-        
-    
