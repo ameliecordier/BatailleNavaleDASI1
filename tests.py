@@ -1,13 +1,11 @@
 import unittest
-from intro import Fonctions
+from ocean import *
 
 
 class Test_mesTests(unittest.TestCase):
-    def test_ocean(self):
-        ocean_test = Fonctions.construire_ocean(3, 4)
-
-        self.assertEqual(len(ocean_test), 3)
-        self.assertEqual(len(ocean_test[0]), 4)
-
+    def test_ocean_size(self):
+        o = Ocean(4, 2)
+        self.assertEqual(len(o), 4)
+        self.assertEqual(len(o[0]), 2)
 
 unittest.main()

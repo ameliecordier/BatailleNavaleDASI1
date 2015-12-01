@@ -1,14 +1,21 @@
 from intro import Fonctions
+from ocean import Ocean
 
-class Plateau:
+class Joueur:
+    
     def __init__(self, tailleoceanx, tailleoceany):
         
-        #this.ocean1 = Fonctions.construire_ocean(tailleoceanx,tailleoceany)
+        ocean1 = Ocean(tailleoceanx,tailleoceany)
         #this.flotte1 = Fonctions.creeFlotte()
         
+    def jouer(self, position):
+        #parcours de la liste des bateaux adverses pour voir si touché
+        #si touché: X à la position dans l'océan
+        #si tir manqué: I
         
-        #this.ocean2 = Fonctions.construire_ocean(tailleoceanx,tailleoceany)
-        #this.flotte2 = Fonctions.creeFlotte()
+        
+    def afficherAdversaire(self):
+        #afficher tir sur océan adverse
 
-    def jouer(self):
-        #boucle tant que personne n'a pas gagné
+    def afficherOcean(self):
+        #afficher océan du joueur actif
