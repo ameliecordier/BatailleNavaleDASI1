@@ -1,3 +1,6 @@
+import ocean
+import player
+
 types_bateau = {
     'porte-avion': 5,
     'croiseur': 4,
@@ -14,20 +17,29 @@ class Bateau:
 	self.position = {}
 	self.etat = True
 
-    def set_position(self, x, y, orient):
+    def set_position(self, x, y, orient, ocean):
     '''
-    blabla
+    Positionne un bateau sur l'océan.
     '''
         
-        position = {{x,y,e}} 
-        if orient == 'haut':
-            
-        elif orient == 'bas':
-            
-        elif orient == 'gauche':
+        if x >= 0 or y >= 0 or x <=  or y <= 10:
+             
+            if orient == 'haut':
+                if (y-self.taille)>=0:
+                    for i in range(0,self.taille-1) 
+                        if ocean.getStatutCase(x,y-i):
+                            self.position = {{x,y,orient}}
+                            print("Le bateau a bien été placé.")
+                else:
+                    print("Le bateau n'est pas sur le plateau!")
+            elif orient == 'bas':
                 
+            elif orient == 'gauche':
+            else:
+                
+            self.is_placed = True
         else:
-        self.is_placed = True
+            print("Erreur de coordonées!")
         
         
         
