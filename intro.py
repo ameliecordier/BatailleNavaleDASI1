@@ -28,21 +28,25 @@ class Fonctions:
         while (ok == False) :
             largeur = int(input("Quelle est la largeur de l'océan ? : "))
             hauteur = int(input("Quelle est la hauteur de l'océan ? : "))
-            if( 5 < largeur < 26 and 5 < hauteur < 26 ):
+            if( 4 < largeur < 26 and 4 < hauteur < 26 ):
                 ok = True
             else :
                 print("Valeur > 5 ou <26 attention")
         return hauteur, largeur
 
-    def saisir_params_bateau():
+    def saisir_params_bateau(ocean):
         ok = False
         while (ok == False) :
+            x = len(ocean)
+            y =ocean.largeur()
+            nbre_bateaux_max = x/5*y-1
             default_set =input("Voulez vous  jouer avec un set par default  ? (o/n) : ")
             if (default_set == "o" or default_set == "O"):
                 ok = True
                 print("Vous avez choisie un set par defaults \n *** set par défaut ** \n  1 porte-avions (5 cases) \n  1 croiseur (4 cases) \n  1 contre-torpilleurs (3 cases) \n  1 sous-marin (3 cases) \n  1 torpilleur (2 cases)  \n ******")
                 #appeler la fonction creer set default#
             elif (default_set =="n" or default_set == "N"):
+                nbre_bateaux = input("Combien de bateaux voulez vous pour votre set (min: 1, max: "+nbre_bateaux_max+" ? : " )
                 for untype in types_bateau:
                    nombreBateau =input("Combien de ce type de bateau ( " +untype +") ? :" )
                    #if (nombreBateau > 0 ) :#
@@ -59,18 +63,7 @@ class Fonctions:
 
 
         return True
-    def construire_ocean(hauteur_ocean, largeur_ocean):
-        ocean = []
-        for liste in range(hauteur_ocean):
-            ligne = []
-            for case in range(largeur_ocean):
-                ligne.append('O')
-            ocean.append(ligne)
-
-        print("len(ocean) :" + str(len(ocean)))
-        print("len(ocean[0]) :" + str(len(ocean[0])))
-
-        return ocean
+   
 
     def afficher_ocean(ocean):
         pprint(ocean)
