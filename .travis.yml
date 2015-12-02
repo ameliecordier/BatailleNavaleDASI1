@@ -3,4 +3,4 @@ python:
     - 3.5
 
 script:
-    - python tests/test_ocean.py
+    - python python -m unittest -v _tests.py

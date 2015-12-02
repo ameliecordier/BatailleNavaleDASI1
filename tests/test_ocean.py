@@ -8,4 +8,4 @@ class Test_mesTests(unittest.TestCase):
         self.assertEqual(len(o), 4)
         self.assertEqual(o.largeur(), 2)
 
-unittest.main()
+
