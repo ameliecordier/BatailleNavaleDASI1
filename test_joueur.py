@@ -1,4 +1,4 @@
-from plateau import *
+from joueur import *
 from bateau import *
 import unittest
 
