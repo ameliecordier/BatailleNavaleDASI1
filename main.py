@@ -7,7 +7,7 @@ if testJouer == True:
     o1 = Ocean()
     o1.construire_ocean(h, l)
     #o1.afficher_ocean()
-    Fonctions.saisir_params_bateau(o1)
+    #Fonctions.saisir_params_bateau(o1)
 
 else:
     print("au revoir")

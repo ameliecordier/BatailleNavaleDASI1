@@ -46,7 +46,7 @@ class Fonctions:
                 print("Vous avez choisie un set par defaults \n *** set par défaut ** \n  1 porte-avions (5 cases) \n  1 croiseur (4 cases) \n  1 contre-torpilleurs (3 cases) \n  1 sous-marin (3 cases) \n  1 torpilleur (2 cases)  \n ******")
                 #appeler la fonction creer set default#
             elif (default_set =="n" or default_set == "N"):
-                nbre_bateaux = input("Combien de bateaux voulez vous pour votre set (min: 1, max: "+nbre_bateaux_max+" ? : " )
+                nbre_bateaux = input("Combien de bateaux voulez vous pour votre set (min: 1, max: " + str(nbre_bateaux_max) + " ? : " )
                 for untype in types_bateau:
                    nombreBateau =input("Combien de ce type de bateau ( " +untype +") ? :" )
                    #if (nombreBateau > 0 ) :#
