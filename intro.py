@@ -3,8 +3,9 @@ from bateau import types_bateau
 
 
 
-class Fonctions :
+class Fonctions:
     def start_up():
+
         ok = False
         while (ok == False) :
             jouer = input(" Bonjour et bienvenue... voulez-vous jouer ? (o/n) : ")
@@ -18,6 +19,7 @@ class Fonctions :
                 print("Ohhh nonnnnn")
                 b = False
         return b    
+
     def saisir_params_ocean():
         ok = False 
         print("Notre plus grand océan est de taille 26 * 26")
