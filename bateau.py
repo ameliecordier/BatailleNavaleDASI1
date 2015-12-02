@@ -13,9 +13,9 @@ class Bateau:
     def __init__(self, type):
         self.type = type
         self.taille = types_bateau[type]
-	self.is_placed = False
-	self.position = {}
-	self.etat = True
+            self.is_placed = False
+            self.position = {}
+            self.etat = True
 
     def set_position(self, x, y, orient, ocean):
     '''
