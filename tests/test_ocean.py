@@ -6,6 +6,6 @@ class Test_mesTests(unittest.TestCase):
     def test_ocean_size(self):
         o = Ocean(4, 2)
         self.assertEqual(len(o), 4)
-        self.assertEqual(len(o[0]), 2)
+        self.assertEqual(o.largeur(), 2)
 
 unittest.main()
