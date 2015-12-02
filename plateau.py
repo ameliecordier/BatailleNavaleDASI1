@@ -9,6 +9,9 @@ class Joueur:
         flotte1 = flotte
         
     def jouer(self, position, adversaire):
+
+
+        print ("Tir... ")
         
         #for bateau in adversaire.flotte1:
          #   for ObjetPos in bateau.listepos:
@@ -23,8 +26,7 @@ class Joueur:
         #parcours de la liste des bateaux adverses pour voir si touché
         #si touché: X à la position dans l'océan
         #si tir manqué: I
-        
-        
+
     def afficherAdversaire(self):
         #afficher océan connu de l'adversaire
         ocean1.afficher_ocean()
