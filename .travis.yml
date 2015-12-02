@@ -3,5 +3,4 @@ python:
     - 3.5
 
 script:
-    - python main.py
     - python tests.py
