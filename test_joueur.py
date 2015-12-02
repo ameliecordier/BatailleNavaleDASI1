@@ -3,11 +3,15 @@ from bateau import *
 import unittest
 
 
-class TestPlateau(unittest.TestCase):
-    def test_plateau(self):
+class TestJoueur(unittest.TestCase):
+    def test_joueur(self):
         
         bateaux = []
         bateaux.append(Bateau("Porte-avion"))
         bateaux.append(Bateau("Croiseur"))
+
+        #bateaux[0].set_position(1,1,"haut",
         
-        plateau = Joueur(10,10, bateaux)
+        joueur = Joueur(10,10, bateaux)
+
+        
