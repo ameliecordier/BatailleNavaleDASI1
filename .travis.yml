@@ -2,6 +2,6 @@ language: python
 python:
     - 3.5
 
-scripts:
+script:
     - python main.py
     - python tests.py
