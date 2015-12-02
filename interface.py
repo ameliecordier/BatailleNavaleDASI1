@@ -1,9 +1,9 @@
-from pprint import pprint
+﻿from pprint import pprint
 #from bateau import types_bateau
 
 
 
-class Fonctions:
+class Interface:
     def start_up():
 
         ok = False
@@ -21,6 +21,7 @@ class Fonctions:
         return b    
 
     def saisir_params_ocean():
+        
         ok = False 
         print("Notre plus grand océan est de taille 26 * 26")
         print("Notre plus petit océan est de taille 5 * 5")
@@ -34,7 +35,7 @@ class Fonctions:
                 print("Valeur > 5 ou <26 attention")
         return hauteur, largeur
 
-    def saisir_params_bateau(ocean):
+    def saisir_set_bateaux(ocean):
         ok = False
         while (ok == False) :
             x = len(ocean)
@@ -65,5 +66,3 @@ class Fonctions:
         return True
    
 
-    def afficher_ocean(ocean):
-        pprint(ocean)
