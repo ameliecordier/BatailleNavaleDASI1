@@ -19,6 +19,7 @@ class Bateau:
 
     def set_position(self, x, y, orient, ocean):
     '''
+    Vérifie que les coordonées sont juste.
     Positionne un bateau sur l'océan.
     '''
         messOk = "Le bateau a bien été placé."
@@ -39,8 +40,8 @@ class Bateau:
                             if ocean.getStatutCase(x,y+i):
                                 self.position = {{x,y+i,e}}
                                 print(messOk)
-                    else:
-                        print(messErr)    
+                else:
+                    print(messErr)    
             elif orient == 'gauche':
                 if (x-self.taille)>=0:
                     for i in range(0,self.taille-1) 
@@ -60,3 +61,6 @@ class Bateau:
             self.is_placed = True
         else:
             print("Erreur de coordonées!")
+
+    def get_position(self):
+        return self.position
