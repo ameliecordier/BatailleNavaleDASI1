@@ -8,5 +8,3 @@ Ce dépôt contient les sources d'un jeu de Bataille Navale réalisé par les é
 Tests
 =====
 
-.. image:: https://travis-ci.org/ameliecordier/BatailleNavaleDASI1.svg
-    :target: https://travis-ci.org/ameliecordier/BatailleNavaleDASI1
