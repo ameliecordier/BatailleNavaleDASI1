@@ -13,54 +13,60 @@ class Bateau:
     def __init__(self, type):
         self.type = type
         self.taille = types_bateau[type]
-            self.is_placed = False
-            self.position = {}
-            self.etat = True
+        self.is_placed = False
+        self.position = {}
+        self.etat = True
+        static self.bateaux = {}
 
-    def set_position(self, x, y, orient, ocean):
+    def set_position(self, x, y, orient, maxX, maxY):
     '''
     Vérifie que les coordonées sont juste.
     Positionne un bateau sur l'océan.
     '''
         messOk = "Le bateau a bien été placé."
         messErr = "Le bateau n'est pas sur le plateau!"
-        if x >= 0 or y >= 0 or x <=  or y <= 10:
+        if x >= 0 or y >= 0 or x <= maxX or y <= maxY:
             
             if orient == 'haut':
+                '''Test si le bateau ne sort pas de plateau  '''
                 if (y-self.taille)>=0:
                     for i in range(0,self.taille-1) 
-                        if ocean.getStatutCase(x,y-i):
-                            self.position = {{x,y-i,e}}
+                        if self.getStatutCase(x,y-i):
+                            self.position.append({x,y-i,e})
                             print(messOk)
                 else:
                     print(messErr)
             elif orient == 'bas':
                 if (y+self.taille)>=0:
-                        for i in range(0,self.taille-1) 
-                            if ocean.getStatutCase(x,y+i):
-                                self.position = {{x,y+i,e}}
-                                print(messOk)
+                    for i in range(0,self.taille-1) 
+                        if self.getStatutCase(x,y+i):
+                            self.position.append({x,y+i,e})
+                            print(messOk)
                 else:
                     print(messErr)    
             elif orient == 'gauche':
                 if (x-self.taille)>=0:
                     for i in range(0,self.taille-1) 
-                        if ocean.getStatutCase(x-i,y):
-                            self.position = {{x-i,y,e}}
+                        if self.getStatutCase(x-i,y):
+                            self.position.append({x-i,y,e})
                             print(messOk)
                 else:
                     print(messErr)
             else:
                 if (x+self.taille)>=0:
                     for i in range(0,self.taille-1) 
-                        if ocean.getStatutCase(x+i,y):
-                            self.position = {{x+i,y,e}}
+                        if self.getStatutCase(x+i,y):
+                            self.position.append({x+i,y,e})
                             print(messOk)
                 else:
                     print(messErr)
+            self.bateaux.append(self.position)
             self.is_placed = True
         else:
             print("Erreur de coordonées!")
 
+    def getStatutCase(self, x, y):
+        return True
+    
     def get_position(self):
         return self.position
