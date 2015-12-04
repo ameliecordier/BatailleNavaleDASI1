@@ -1,6 +1,6 @@
 import unittest
 
-class Test_mesTests(unittest.TestCase):
+class _tests(unittest.TestCase):
     def test_ocean_size(self):
         t = 1
 
