@@ -1,14 +1,14 @@
-from intro import Fonctions
 from ocean import Ocean
+from bateau import Bateau
 
 class Joueur:
     
     def __init__(self, tailleoceanx, tailleoceany, flotte):
         
-        ocean1 = Ocean(tailleoceanx,tailleoceany)
-        flotte1 = flotte
+        self.ocean = Ocean(tailleoceanx,tailleoceany)
+        self.flotte = flotte
         
-    def jouer(self, position, adversaire):
+    def tirer(self, position, adversaire):
 
 
         print ("Tir... ")
@@ -29,7 +29,7 @@ class Joueur:
 
     def afficherAdversaire(self):
         #afficher océan connu de l'adversaire
-        ocean1.afficher_ocean()
+        ocean.afficher_ocean()
 
     def afficherSoi(self):
         #afficher océan du joueur actif
