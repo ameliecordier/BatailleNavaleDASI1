@@ -1,40 +1,48 @@
-﻿from pprint import pprint
+﻿# -*- coding: utf-8 -*-
+
+from pprint import pprint
 #from bateau import types_bateau
 
 
 
 class Interface:
     def start_up():
+        jouer = input(" Bonjour et bienvenue... voulez-vous jouer ? (o/n) : ")      
+        start = Interface.start_up_mecanic(jouer)
+           
+        return start    
 
-        ok = False
-        while (ok == False) :
-            jouer = input(" Bonjour et bienvenue... voulez-vous jouer ? (o/n) : ")
-                    
-            if (jouer =="O" or jouer =="o"): 
-                ok = True
-                print("jouer !")
-                b = True
-            elif(jouer =="N" or jouer == "n") :
-                ok = True
-                print("Ohhh nonnnnn")
-                b = False
-        return b    
-
-    def saisir_params_ocean():
-        
-        ok = False 
-        print("Notre plus grand océan est de taille 26 * 26")
-        print("Notre plus petit océan est de taille 5 * 5")
-        print("Indiquer la taille de l'océan :")
-        while (ok == False) :
-            largeur = int(input("Quelle est la largeur de l'océan ? : "))
-            hauteur = int(input("Quelle est la hauteur de l'océan ? : "))
-            if( 4 < largeur < 26 and 4 < hauteur < 26 ):
-                ok = True
-            else :
-                print("Valeur > 5 ou <26 attention")
+    def start_up_mecanic(jouer):
+        if (jouer.lower()=="o"): 
+            print("jouer !")
+            start = True
+            
+        elif(jouer.lower() == "n") :
+            print("Ohhh nonnnnn")
+            start = False
+        else :
+            Interface.start_up()
+        return start
+    
+    def saisir_params_ocean(first_try):
+        if (first_try == True):
+            print("Notre plus grand océan est de taille 26 * 26")
+            print("Notre plus petit océan est de taille 5 * 5")
+            print("Indiquer la taille de l'océan :")
+        else :
+            print("Valeur >= 5 ou <26 attention")
+        largeur = int(input("Quelle est la largeur de l'océan ? : "))
+        hauteur = int(input("Quelle est la hauteur de l'océan ? : "))
+        Interface.saisir_params_ocean_mecanic(largeur, hauteur)
         return hauteur, largeur
 
+    def saisir_params_ocean_mecanic(largeur, hauteur):
+        if( 4 < largeur < 27 and 4 < hauteur < 27 ):
+            ok = True
+        else :
+            Interface.saisir_params_ocean(False)
+        return ok
+        
     def saisir_set_bateaux(ocean):
         ok = False
         while (ok == False) :

@@ -3,4 +3,6 @@ python:
     - 3.5
 
 script:
-    - python _tests.py
+    - python -m unittest discover tests
+	
+	
