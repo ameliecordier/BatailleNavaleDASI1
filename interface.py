@@ -1,7 +1,7 @@
 ﻿# -*- coding: utf-8 -*-
 
 from pprint import pprint
-#from bateau import types_bateau
+from bateau import types_bateau
 
 
 
@@ -42,21 +42,25 @@ class Interface:
         else :
             Interface.saisir_params_ocean(False)
         return ok
-        
+
+    #A decomposer avec une méthode mecanic pour la tester    
     def saisir_set_bateaux(ocean):
         ok = False
         while (ok == False) :
             x = len(ocean)
             y =ocean.largeur()
             nbre_bateaux_max = x/5*y-1
+            flotte = []
             default_set =input("Voulez vous  jouer avec un set par default  ? (o/n) : ")
             if (default_set == "o" or default_set == "O"):
                 ok = True
                 print("Vous avez choisie un set par defaults \n *** set par défaut ** \n  1 porte-avions (5 cases) \n  1 croiseur (4 cases) \n  1 contre-torpilleurs (3 cases) \n  1 sous-marin (3 cases) \n  1 torpilleur (2 cases)  \n ******")
-                #appeler la fonction creer set default#
+                for untype in types_bateau:
+                    bateau = Bateau(untype)
+                    flotte.append(bateau)
             elif (default_set =="n" or default_set == "N"):
                 nbre_bateaux = input("Combien de bateaux voulez vous pour votre set (min: 1, max: " + str(nbre_bateaux_max) + " ? : " )
-                for untype in types_bateau:
+                #for untype in types_bateau:
                    nombreBateau =input("Combien de ce type de bateau ( " +untype +") ? :" )
                    #if (nombreBateau > 0 ) :#
                        #int i = 1#
@@ -71,6 +75,6 @@ class Interface:
             
 
 
-        return True
+        return Flotte
    
 
