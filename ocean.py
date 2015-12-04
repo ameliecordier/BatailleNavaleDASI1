@@ -1,9 +1,3 @@
-from collections import OrderedDict
-
-__author__ = 'phylante'
-from pprint import pprint
-
-
 class Ocean:
     def __init__(self, hauteur=0, largeur=0):
         """
@@ -70,4 +64,3 @@ class Ocean:
         for cle in [chr(y + 65) for y in range(len(self))]:
             ligne_a_afficher = cle + "  " + "  ".join(self.ocean[cle])
             print(ligne_a_afficher)
-
