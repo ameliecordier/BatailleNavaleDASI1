@@ -37,7 +37,7 @@ class TestJoueur(unittest.TestCase):
     def test_bateau_touche(self):
 
         #Tir du joueur 1 sur le joueur 2
-        self.J1.tirer({1,1},J2)
+        self.J1.tirer({1,1},self.J2)
 
         #Test sur l'unique bateau du joueur 2 sur sa première position
         #il doit etre touché
