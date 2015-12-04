@@ -1,7 +1,6 @@
 from bateau import *
 import unittest
 
-
 class TestBateau(unittest.TestCase):
     def test_bateau(self):
         bateau = Bateau('porte-avion')
@@ -9,6 +8,20 @@ class TestBateau(unittest.TestCase):
 
     def test_not_a_boat(self):
         self.assertRaises(KeyError, Bateau, 'pas_un_bateau')
+        
+    def test_get_statut_case(self):
+        bateau = Bateau('porte-avion')
+        self.assertEqual(bateau.getStatutCase(1,1),True)
+
+    def test_set_position(self):
+        bateau = Bateau('porte-avion')
+        self.assertEqual(bateau.set_position(1,1,"droite",10,10),True)
+
+    def test_bad_position(self):
+        bateau = Bateau('porte-avion')
+        self.assertEqual(bateau.set_position(1,1,"gauche",10,10),False)
+        
+    
 
 ### Test créer bateau
 ##a = creerBateau("Porte-Avion")
@@ -46,4 +59,4 @@ class TestBateau(unittest.TestCase):
 ##
 ##
 ###... et quoi d'autre ? 
-##
+
